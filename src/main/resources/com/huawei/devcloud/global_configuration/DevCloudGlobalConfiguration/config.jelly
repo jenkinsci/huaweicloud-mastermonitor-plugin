@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:c="/lib/credentials" xmlns:st="jelly:stapler">
+    <f:section title="${%DevCloud.Configuration}">
+        <f:entry title="${%DevCloud.url}" description="${%DevCloud.url.desc}" field="url">
+            <f:textbox/>
+        </f:entry>
+        
+        <f:entry title="${%DevCloud.model}" description="${%DevCloud.model.desc}" field="dataType">
+		     <f:select/>
+		</f:entry>
+
+        <f:entry title="${%DevCloud.Credentials}" field="credentialsId" description="${%DevCloud.Credentials.desc}">
+            <c:select/>
+        </f:entry>
+
+        <f:advanced>
+            <f:entry title="${%DevCloud.Interval}" description="${%DevCloud.Interval.desc}" field="interval">
+                <f:number/>
+            </f:entry>
+            <f:entry title="${%DevCloud.threshold}" description="${%DevCloud.threshold.desc}" field="threshold">
+                <f:number/>
+            </f:entry>
+            <st:include page="configure-advanced.jelly" optional="true" />
+        </f:advanced>
+
+
+
+    </f:section>
+</j:jelly>
