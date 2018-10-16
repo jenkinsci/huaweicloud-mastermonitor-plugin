@@ -19,7 +19,7 @@
 		<java.level>8</java.level>
 	</properties>
 
-	<name>huaweicloud jenkins master monitor Plugin</name>
+	<name>huaweicloud master monitor Plugin</name>
 	<description>Monitor Jenkins Master which can be scheduled by DevCloud.</description>
 
 	<licenses>
